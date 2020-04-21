@@ -2,16 +2,16 @@
 class Configurd < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/configurd"
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/foomo/configurd/releases/download/0.2.0/configurd_0.2.0_darwin_amd64.tar.gz"
-    sha256 "3b527759c33f54f749966e1891e836fa65a4f4132dd50eed7ca6f1b728317afc"
+    url "https://github.com/foomo/configurd/releases/download/0.3.0/configurd_0.3.0_darwin_amd64.tar.gz"
+    sha256 "071a9ceb9e856f008d5e453eaea38f6920ce054718370e42d50c48abca717350"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/configurd/releases/download/0.2.0/configurd_0.2.0_linux_amd64.tar.gz"
-      sha256 "7f4ff57bb568e670eeb01bee7f79e59d86240f24615b447421e7e2151b6e5528"
+      url "https://github.com/foomo/configurd/releases/download/0.3.0/configurd_0.3.0_linux_amd64.tar.gz"
+      sha256 "d6c85d0f62ac84bb0b4077cc63f0088ddc2cbee351deb081ebe5ec6427149a76"
     end
   end
 
