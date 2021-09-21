@@ -5,20 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "1.3.2"
+  version "1.3.4"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.3.2/squadron_1.3.2_darwin_amd64.tar.gz"
-      sha256 "20825c10fe6148dd6e06a551a1506d5088e8136080a768dc8b922fe1e0182970"
+      url "https://github.com/foomo/squadron/releases/download/v1.3.4/squadron_1.3.4_darwin_amd64.tar.gz"
+      sha256 "c9bf3624a31bc591161bd844a313c417755c1a5f04080077c9d1fd29ab36b15a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.3.2/squadron_1.3.2_linux_amd64.tar.gz"
-      sha256 "5f1d761b8690e3df3b4135368d67cc7ba43388521e9d60508dd8284b22bfc555"
+      url "https://github.com/foomo/squadron/releases/download/v1.3.4/squadron_1.3.4_linux_amd64.tar.gz"
+      sha256 "154ba932e6f5299bdf235e7c3cebe7ecd65d35a60181cb812653358a5adea423"
     end
   end
 
