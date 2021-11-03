@@ -5,25 +5,28 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "1.4.0"
-  bottle :unneeded
+  version "1.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.4.0/squadron_1.4.0_darwin_amd64.tar.gz"
-      sha256 "766ce46d6b3050ee6c31f3c895d2cfa332a8f2c841b3064933662298170be414"
+      url "https://github.com/foomo/squadron/releases/download/v1.5.1/squadron_1.5.1_darwin_amd64.tar.gz"
+      sha256 "7f7c116b4b9af00a7932ae4fa346e0219c33521363109c085340c0c55e69fc9f"
+
+      def install
+        bin.install "squadron"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.4.0/squadron_1.4.0_linux_amd64.tar.gz"
-      sha256 "3f51507339c3193b02ac900d3474342520af4dd9bb93a4e991c655acf92afd83"
-    end
-  end
+      url "https://github.com/foomo/squadron/releases/download/v1.5.1/squadron_1.5.1_linux_amd64.tar.gz"
+      sha256 "808a1e164fa54b8cd3593e9e9e769157933208e673aaa6d12e218b8229a1c9af"
 
-  def install
-    bin.install "squadron"
+      def install
+        bin.install "squadron"
+      end
+    end
   end
 
   def caveats; <<~EOS
