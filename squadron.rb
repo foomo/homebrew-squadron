@@ -5,12 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "1.6.3"
+  version "1.6.4"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/foomo/squadron/releases/download/v1.6.4/squadron_1.6.4_darwin_arm64.tar.gz"
+      sha256 "02dd300bd8b9010d9c7a1f9c98685d02cb6fd1a29e036d13101569f283d85c52"
+
+      def install
+        bin.install "squadron"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.6.3/squadron_1.6.3_darwin_amd64.tar.gz"
-      sha256 "4f9532a354e1206657c0d5bf05d11fd31fd78f25cd97d9ea12619b677b872263"
+      url "https://github.com/foomo/squadron/releases/download/v1.6.4/squadron_1.6.4_darwin_amd64.tar.gz"
+      sha256 "89b1876b63b20da8a606d3bab317471d93571d9838b7f5106eda204d1b2c2e83"
 
       def install
         bin.install "squadron"
@@ -20,8 +28,16 @@ class Squadron < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.6.3/squadron_1.6.3_linux_amd64.tar.gz"
-      sha256 "a6256dd6069f02f414ff1285c8dd40715055c7baee45211503a062b4b2167879"
+      url "https://github.com/foomo/squadron/releases/download/v1.6.4/squadron_1.6.4_linux_amd64.tar.gz"
+      sha256 "f5c589765097b88562737822b1a7b3bbc5b1ead5238203f5eacd7eaeb867467c"
+
+      def install
+        bin.install "squadron"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/squadron/releases/download/v1.6.4/squadron_1.6.4_linux_arm64.tar.gz"
+      sha256 "6d9b22a3cd05864e5e1a0de9b81d7568af28f58788a949eb774476132a3d7440"
 
       def install
         bin.install "squadron"
