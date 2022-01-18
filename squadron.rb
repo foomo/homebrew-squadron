@@ -5,20 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "1.6.9"
+  version "1.6.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/squadron/releases/download/v1.6.9/squadron_1.6.9_darwin_arm64.tar.gz"
-      sha256 "5c2008425820da0fbccfa4ecd6b86d0943568e00acdeedec68aba745de3a9d5a"
+      url "https://github.com/foomo/squadron/releases/download/v1.6.10/squadron_1.6.10_darwin_arm64.tar.gz"
+      sha256 "33c36f5f50da45384b4bc295a812b3c33d38e965106bc2c9daa0bed72eb48357"
 
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.6.9/squadron_1.6.9_darwin_amd64.tar.gz"
-      sha256 "e1bc0eaf4e1c276b9dcf8c73b2931cc9854eadfe2175f1a80a2409327677192b"
+      url "https://github.com/foomo/squadron/releases/download/v1.6.10/squadron_1.6.10_darwin_amd64.tar.gz"
+      sha256 "77e4236e99f77224942848187e01b2d138008655ac0fd40be1967d9e120f279d"
 
       def install
         bin.install "squadron"
@@ -28,16 +28,16 @@ class Squadron < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.6.9/squadron_1.6.9_linux_amd64.tar.gz"
-      sha256 "810cd2fe954e06baac1222777ccd357b115ebef5ba15d0f8f0f4026a9f0c7bbd"
+      url "https://github.com/foomo/squadron/releases/download/v1.6.10/squadron_1.6.10_linux_amd64.tar.gz"
+      sha256 "4389716f28c0a70871a0222f840e91beba6a21026bd67a42b24e0e4e4e2a0db3"
 
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/squadron/releases/download/v1.6.9/squadron_1.6.9_linux_arm64.tar.gz"
-      sha256 "bf922e8b9021f54f50d0aa4abe6773dcb3d0ec3904b6f8cb7107171e1a455cd6"
+      url "https://github.com/foomo/squadron/releases/download/v1.6.10/squadron_1.6.10_linux_arm64.tar.gz"
+      sha256 "c06ca0ce7979818d6f85a4fd9d6eab760c5314e1679682df32df1c3ef162ba9a"
 
       def install
         bin.install "squadron"
