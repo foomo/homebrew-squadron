@@ -5,20 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "1.7.0"
+  version "1.7.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.7.0/squadron_1.7.0_darwin_amd64.tar.gz"
-      sha256 "98054856a004603db2f5135aaa79a505f1cb313efb6f9b5b92db62fe699f7c0c"
+      url "https://github.com/foomo/squadron/releases/download/v1.7.1/squadron_1.7.1_darwin_amd64.tar.gz"
+      sha256 "3a7cf9a04818a243fa7f9fcf7425b93443c75d199568f7302ba42611dd6d9b0b"
 
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/squadron/releases/download/v1.7.0/squadron_1.7.0_darwin_arm64.tar.gz"
-      sha256 "d7e7b7d9d2b9bc088c2a62a8bbbe789f516b68d4d0ff26b42a88d0f8c0d39c8f"
+      url "https://github.com/foomo/squadron/releases/download/v1.7.1/squadron_1.7.1_darwin_arm64.tar.gz"
+      sha256 "047730a63273df2f30a208087ad1a5bd42fc5153ff1a18c2363c45a531430f2f"
 
       def install
         bin.install "squadron"
@@ -27,17 +27,17 @@ class Squadron < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.7.0/squadron_1.7.0_linux_amd64.tar.gz"
-      sha256 "7097a2c183bee5b9b982ac797992eb6865b39e7622b9571504a72f0e33d0e316"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/squadron/releases/download/v1.7.1/squadron_1.7.1_linux_arm64.tar.gz"
+      sha256 "18f8583e544b2b15e5cbee999beab5b2032bceab6a7da914de17f3d6f0c0f066"
 
       def install
         bin.install "squadron"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/squadron/releases/download/v1.7.0/squadron_1.7.0_linux_arm64.tar.gz"
-      sha256 "2a80f30e36323c26e279fefcd76a553b5205105219e4003a31b911a219a9d714"
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/squadron/releases/download/v1.7.1/squadron_1.7.1_linux_amd64.tar.gz"
+      sha256 "8556a7ed121d671e71ea1880aa31cf650ee60d5b45c7f5b8460182f4c17dd0dc"
 
       def install
         bin.install "squadron"
