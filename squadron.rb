@@ -5,20 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "1.9.0"
+  version "1.9.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.9.0/squadron_1.9.0_darwin_amd64.tar.gz"
-      sha256 "d9fd28fd4968c8e3e811787bf89c8d8190fec84cfc5140bdc8f36543c107c132"
+      url "https://github.com/foomo/squadron/releases/download/v1.9.1/squadron_1.9.1_darwin_amd64.tar.gz"
+      sha256 "4018e964b523bdb24dff47c0e40b4e59295c92cc3588525d014ffefa62ab02e8"
 
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/squadron/releases/download/v1.9.0/squadron_1.9.0_darwin_arm64.tar.gz"
-      sha256 "d73d1af1f3b2b2a59f5abd266412f2bf4eb7611a35d95f78781a3443dd6f2f20"
+      url "https://github.com/foomo/squadron/releases/download/v1.9.1/squadron_1.9.1_darwin_arm64.tar.gz"
+      sha256 "8c74a0def1533719824c604a6b540424a435524bf4290bab4e653fe26cd7ac9a"
 
       def install
         bin.install "squadron"
@@ -28,16 +28,16 @@ class Squadron < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/squadron/releases/download/v1.9.0/squadron_1.9.0_linux_arm64.tar.gz"
-      sha256 "714908cde02232604368e95b662b58a85de61563d7d482ef21dfc23bbfebc536"
+      url "https://github.com/foomo/squadron/releases/download/v1.9.1/squadron_1.9.1_linux_arm64.tar.gz"
+      sha256 "e6198c2a221a839f19f23e6986d9042eaf6eba7440927256f1741701f677d8dc"
 
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v1.9.0/squadron_1.9.0_linux_amd64.tar.gz"
-      sha256 "7672e5bb9032402a95a585ac2a95feb6341998d892019b459302a72d13190268"
+      url "https://github.com/foomo/squadron/releases/download/v1.9.1/squadron_1.9.1_linux_amd64.tar.gz"
+      sha256 "3e885ce542c30ded5fea088b68745f686dfe9abbae879d39511b955211a92224"
 
       def install
         bin.install "squadron"
@@ -45,8 +45,9 @@ class Squadron < Formula
     end
   end
 
-  def caveats; <<~EOS
-    squadron -h
-  EOS
+  def caveats
+    <<~EOS
+      squadron -h
+    EOS
   end
 end
